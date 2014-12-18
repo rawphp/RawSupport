@@ -83,4 +83,42 @@ class Util
 
         return $target;
     }
+
+    /**
+     * Get the class 'basename' of the given object / class.
+     *
+     * @param mixed $class
+     *
+     * @return string
+     */
+    public static function classBasename( $class )
+    {
+        $class = is_object( $class ) ? get_class( $class ) : $class;
+
+        return basename( str_replace( '\\', '/', $class ) );
+    }
+
+    /**
+     * Get the first element of an array. Useful for method chaining.
+     *
+     * @param array $array
+     *
+     * @return mixed
+     */
+    public static function head( $array )
+    {
+        return reset( $array );
+    }
+
+    /**
+     * Get the last element from an array.
+     *
+     * @param array $array
+     *
+     * @return mixed
+     */
+    public static function last( $array )
+    {
+        return end( $array );
+    }
 }
