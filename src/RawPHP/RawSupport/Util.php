@@ -121,4 +121,28 @@ class Util
     {
         return end( $array );
     }
+
+    /**
+     * Checks whether the value index position is valid.
+     *
+     * Returns FALSE if an object or resource is passed in.
+     *
+     * @param int   $index the array position to check
+     * @param mixed $value array or string
+     *
+     * @return bool TRUE if valid index, else FALSE
+     */
+    public static function validIndex( $index, $value )
+    {
+        if ( is_array( $value ) )
+        {
+            return ( count( $value ) > $index && $index >= 0 );
+        }
+        elseif ( is_string( $value ) )
+        {
+            return ( strlen( $value ) > $index && $index >= 0 );
+        }
+
+        return FALSE;
+    }
 }
