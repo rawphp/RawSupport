@@ -35,13 +35,12 @@
 
 namespace RawPHP\RawSupport\Exception;
 
-use Exception;
-
 /**
- * Class RawException
+ * Class NotImplementedException
  *
  * @package RawPHP\RawSupport\Exception
  */
-class RawException extends Exception
+class NotImplementedException extends RawException
 {
+
 }
