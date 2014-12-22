@@ -52,6 +52,13 @@ interface IEntity
     public function getId();
 
     /**
+     * Set ID.
+     *
+     * @param mixed $id
+     */
+    public function setId( $id );
+
+    /**
      * Get date created.
      *
      * @return DateTime
@@ -59,9 +66,23 @@ interface IEntity
     public function getDateCreated();
 
     /**
+     * Set date created.
+     *
+     * @param DateTime $date
+     */
+    public function setDateCreated( DateTime $date );
+
+    /**
      * Get date updated.
      *
      * @return DateTime
      */
     public function getDateUpdated();
+
+    /**
+     * Set date updated.
+     *
+     * @param DateTime $date
+     */
+    public function setDateUpdated( DateTime $date );
 }
